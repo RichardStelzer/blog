@@ -2,10 +2,11 @@
 
 <html>
     <head>
-        <title>Blog.</title>
+        <title>{% block title %}{% endblock %}Blog.</title>
     </head>
 
     <body>
-        <h1>Base page</h1>
+        {% block content %}
+        {% endblock %}
     </body>
 </html>
