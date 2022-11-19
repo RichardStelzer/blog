@@ -8,6 +8,8 @@ class Post(models.Model):
     body = models.TextField()
     date_published = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ("-date_published",)
 
 # class Comment(models.Model):
 #    content = models.TextField()
