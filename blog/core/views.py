@@ -1,8 +1,11 @@
 from django.shortcuts import render
 
+from blogpost.models import Post
+
 
 def frontpage(request):
-    return render(request, "core/frontpage.html")
+    posts = Post.objects.all()
+    return render(request, "core/frontpage.html", {"post": posts})
 
 
 def about(request):
