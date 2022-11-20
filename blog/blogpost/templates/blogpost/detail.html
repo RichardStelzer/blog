@@ -20,6 +20,8 @@
                                 <h2 class="subtitle is-4">Comments</h2>
 
                                 <form method="post">
+                                    {% csrf_token %}
+
                                     {{ form.as_p }}
 
                                     <div class="control">
